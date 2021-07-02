@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "springtest"
+  description: "Spring Boot gRPC Service"
+  annotations:
+    github.com/project-slug: fp-mt-test-org/springtest
+    backstage.io/techdocs-ref: url:https://github.com/fp-mt-test-org/springtest
+    backstage.io/kubernetes-id: springtest
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "test"
