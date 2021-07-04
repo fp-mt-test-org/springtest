@@ -4,14 +4,14 @@ flex:
     build:
       command: ./mvnw spring-boot:build-image
     publish:
-      command: jfrog rt docker-push artifactory.flexport.io/springtest-docker-dev-local/springtest:0.0.8-SNAPSHOT springtest-docker-dev-local --build-name=docker-build --build-number=2.0.0
+      command: jfrog rt docker-push artifactory.flexport.io/springtest-docker-dev-local/springtest:0.0.9-SNAPSHOT springtest-docker-dev-local --build-name=docker-build --build-number=2.0.0
     deploy:
       command: >
         docker run
         -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
         -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
         -e ENV=${ENV:-dev}
-        -e TAG=${TAG:-0.0.8-SNAPSHOT}
+        -e TAG=${TAG:-0.0.9-SNAPSHOT}
         -v $PWD:/workdir
         jshimko/kube-tools-aws:3.7.0
         bash -c "cd /workdir && ./scripts/deploy.sh"
