@@ -21,6 +21,8 @@ else
     echo
 fi
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 brew install kubectl
 
 # Write the key to disc.
