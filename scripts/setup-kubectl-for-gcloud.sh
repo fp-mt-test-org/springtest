@@ -21,8 +21,6 @@ else
     echo
 fi
 
-apt-get install brew
-
 brew install kubectl
 
 # Write the key to disc.
