@@ -21,7 +21,7 @@ else
     echo
 fi
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+apt-get install brew
 
 brew install kubectl
 
