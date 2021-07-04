@@ -3,4 +3,4 @@ config:
   namespace: springtest-dev
   image:
     name: artifactory.flexport.io/springtest-docker-dev-local/springtest
-    tag: 0.0.5-SNAPSHOT
+    tag: 0.0.8-SNAPSHOT

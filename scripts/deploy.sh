@@ -15,6 +15,6 @@ set -e
 # echo "--- Deployment for EngDev04 us-east-1 region"
 # kubectl config use-context arn:aws:eks:us-east-1:238801556584:cluster/fpff-nonprod-use1-b
 
-./setup-kubectl-for-gcloud.sh
+./scripts/setup-kubectl-for-gcloud.sh
 
 helm upgrade --install --atomic springtest src/main/helm -n default -f src/main/helm/values-$ENV.yaml --set config.image.tag=$TAG
