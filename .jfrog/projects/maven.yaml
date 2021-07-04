@@ -1,0 +1,10 @@
+version: 1
+type: maven
+resolver:
+  serverId: artifactory.flexport.io
+  snapshotRepo: docker-snapshot
+  releaseRepo: docker
+deployer:
+  serverId: artifactory.flexport.io
+  snapshotRepo: springtest-docker-snapshot-local
+  releaseRepo: springtest-docker-dev-local
