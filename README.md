@@ -10,7 +10,7 @@
 
 After a successful build, you can run it like so:
 
-    docker run -p 8080:8080 springtest:0.0.14-SNAPSHOT
+    docker run -p 8080:8080 springtest:0.0.16-SNAPSHOT
 
 After it starts successfully, you can get a successfully http response:
 

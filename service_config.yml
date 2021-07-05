@@ -4,7 +4,7 @@ flex:
     build:
       command: ./mvnw spring-boot:build-image
     publish:
-      command: jfrog rt docker-push artifactory.flexport.io/springtest-docker-dev-local/springtest:0.0.14-SNAPSHOT springtest-docker-dev-local --build-name=docker-build --build-number=2.0.0
+      command: jfrog rt docker-push artifactory.flexport.io/springtest-docker-dev-local/springtest:0.0.16-SNAPSHOT springtest-docker-dev-local --build-name=docker-build --build-number=2.0.0
     deploy:
       command: ./scripts/deploy.sh
     promote-release:
