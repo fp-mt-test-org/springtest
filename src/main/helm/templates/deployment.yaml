@@ -21,7 +21,7 @@ spec:
         backstage.io/kubernetes-id: springtest
     spec:
       containers:
-      - image: '{{ .Values.config.image.name }}':'{{ .Values.config.image.tag }}'
+      - image: '{{ .Values.config.image.name }}:{{ .Values.config.image.tag }}'
         imagePullPolicy: IfNotPresent
         name: springtest
         resources: {}
