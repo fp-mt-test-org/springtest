@@ -34,3 +34,5 @@ build/
 
 ### devx ###
 .flex
+
+google-cloud-sdk*
