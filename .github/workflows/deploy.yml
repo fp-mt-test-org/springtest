@@ -19,7 +19,5 @@ jobs:
     steps:
     - name: Checkout Source
       uses: actions/checkout@v2
-    - name: Brew
-      run: brew --version
     - name: Deploy
-      run: brew --version && $flex deploy
+      run: $flex deploy
