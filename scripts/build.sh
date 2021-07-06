@@ -22,3 +22,8 @@ echo "Next Version: ${next_version}"
 echo
 
 ./mvnw -Drevision="${next_version}" spring-boot:build-image
+
+service_name='springtest'
+artifact_tag="${service_name}:${next_version}"
+
+docker tag "${artifact_tag}" "${service_name}:latest"
