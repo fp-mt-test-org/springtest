@@ -4,21 +4,29 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
-current_branch=$(git branch --show-current)
-
-if [[ "${default_branch}" == "${current_branch}" ]]; then
-    maturity_level="dev"
-else
-    maturity_level="snapshot"
-fi
-
 echo "Installing svu..."
 brew install caarlos0/tap/svu
 echo "Install complete."
 echo
 
+default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+current_branch=$(git branch --show-current)
+
 next_version="$(svu n)"
+
+if [[ "${default_branch}" == "${current_branch}" ]]; then
+    maturity_level="dev"
+
+    echo "Tagging repo with ${next_version}"
+    git tag "${next_version}"
+
+    echo "Pushing tags"
+    git push --tags
+else
+    next_version="${next_version}-SNAPSHOT"
+    maturity_level="snapshot"
+fi
+
 echo "Next Version: ${next_version}"
 echo
 

@@ -21,15 +21,15 @@ spec:
         backstage.io/kubernetes-id: springtest
     spec:
       containers:
-      - image: '{{ .Values.config.image.name }}:{{ .Values.config.image.tag }}'
+      - image: 'vad1mo/hello-world-rest'
         imagePullPolicy: IfNotPresent
         name: springtest
         resources: {}
         ports:
-          - containerPort: 8080 
+          - containerPort: 5050 
         readinessProbe:
           httpGet:
             path: /actuator/health
-            port: 8080
+            port: 5050
           periodSeconds: 5
 status: {}

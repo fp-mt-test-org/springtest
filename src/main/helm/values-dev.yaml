@@ -1,6 +1,6 @@
 config:
-  host: springtest.nonp-dev-4.use1.eng-nonprod.flexport.internal
+  host: springtest
   namespace: springtest-dev
   image:
-    name: artifactory.flexport.io/springtest-docker-dev-local/springtest
-    tag: 0.0.17-SNAPSHOT
+    name: vad1mo/hello-world-rest
+    tag: 0.0.18-SNAPSHOT
