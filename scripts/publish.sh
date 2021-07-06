@@ -50,7 +50,7 @@ jfrog rt \
     docker-push "${artifact_remote_tag}" \
     "${artifact_repository_name}" \
     --build-name="${service_name}" \
-    --build-number=5.0.0 \
+    --build-number=6.0.0 \
     --url="${artifactory_base_url}/artifactory" \
     --user="${artifactory_username}" \
     --access-token="${artifactory_password}"

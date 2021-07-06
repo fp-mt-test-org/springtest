@@ -8,6 +8,6 @@ flex:
     deploy:
       command: ./scripts/deploy.sh
     promote-release:
-      command: jfrog rt build-promote docker-build 5.0.0 springtest-docker-stg-local
+      command: jfrog rt build-promote docker-build 6.0.0 springtest-docker-stg-local
 service:
   name: springtest
