@@ -30,7 +30,9 @@ fi
 echo "Next Version: ${next_version}"
 echo
 
+
 service_name='springtest'
+artifactory_hostname=$(basename "${artifactory_base_url}")
 artifact_repository_name="${service_name}-docker-${maturity_level}-local"
 artifact_tag="${service_name}:${next_version}"
 artifact_remote_tag="${artifactory_hostname}/${artifact_repository_name}/${artifact_tag}"
