@@ -40,7 +40,7 @@ artifact_remote_tag="${artifactory_hostname}/${artifact_repository_name}/${artif
 docker tag "${artifact_tag}" "${artifact_remote_tag}"
 
 echo "Installing jfrog cli..."
-curl -fL https://getcli.jfrog.io | bash
+curl -fL https://getcli.jfrog.io | bash -s
 
 echo "Tagged ${artifact_tag} as ${artifact_remote_tag}"
 echo
