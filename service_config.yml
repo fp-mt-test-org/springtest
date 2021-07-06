@@ -2,12 +2,12 @@ flex:
   version: 0.5.6
   workflows:
     build:
-      command: ./mvnw spring-boot:build-image
+      command: ./scripts/build.sh
     publish:
-      command: jfrog rt docker-push artifactory.flexport.io/springtest-docker-dev-local/springtest:0.0.17-SNAPSHOT springtest-docker-dev-local --build-name=docker-build --build-number=2.0.0
+      command: ./scripts/publish.sh
     deploy:
       command: ./scripts/deploy.sh
     promote-release:
-      command: jfrog rt build-promote docker-build 2.0.0 springtest-docker-stg-local
+      command: jfrog rt build-promote docker-build 4.0.0 springtest-docker-stg-local
 service:
   name: springtest

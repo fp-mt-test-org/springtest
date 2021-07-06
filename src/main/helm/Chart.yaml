@@ -1,6 +1,6 @@
 apiVersion: v2
 name: springtest
-description: Chart for creating springtest and ingress mapping our Flexport EKS clusters
+description: Chart for creating springtest and ingress mapping.
 
 type: application
 version: 0.1.0

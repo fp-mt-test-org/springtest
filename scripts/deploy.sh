@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-set -e
+set -o errexit
+set -o pipefail
+set -o nounset
 
 # echo "--- Assume infra_builder role for account EngDev04 238801556584"
 # OUTPUT=$(aws sts assume-role --role-arn arn:aws:iam::238801556584:role/infra_builder --role-session-name cd)
