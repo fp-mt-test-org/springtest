@@ -9,7 +9,7 @@ brew install caarlos0/tap/svu
 echo "Install complete."
 echo
 
-default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+default_branch=$([ -f .git/refs/heads/master ] && echo master || echo main)
 current_branch=$(git branch --show-current)
 
 next_version="$(svu n)"

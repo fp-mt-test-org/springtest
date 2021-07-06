@@ -4,7 +4,7 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+default_branch=$([ -f .git/refs/heads/main ] && echo main || echo master)
 current_branch=$(git branch --show-current)
 
 echo "Installing svu..."
