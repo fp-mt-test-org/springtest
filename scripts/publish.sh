@@ -46,7 +46,7 @@ jfrog rt \
     "${artifact_repository_name}" \
     --build-name="${service_name}" \
     --build-number=4.0.0 \
-    --url="https://${artifactory_hostname}/artifactory" \
+    --url="${artifactory_base_url}/artifactory" \
     --user="${artifactory_username}" \
     --access-token="${artifactory_password}"
 
