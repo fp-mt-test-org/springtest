@@ -21,3 +21,7 @@ jobs:
         fetch-depth: 0
     - name: Build
       run: $flex build
+
+    - name: Publish Release
+      run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} scripts/publish.sh
+      if: ${{ github.ref == 'refs/heads/master' }}
